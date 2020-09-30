@@ -87,6 +87,8 @@ if __name__ == "__main__":
         if len(coords) % 4 != 0:
             print('Number of clicks not a multiple of 4, Exiting')
             sys.exit(1)
+        elif len(coords) == 0:
+            continue
         else:
             pts = np.array(coords, dtype='float32')
             pts[:, 0] *= (w/960)
